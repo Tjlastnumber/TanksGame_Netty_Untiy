@@ -90,7 +90,7 @@ namespace Complete
         private void EngineAudio()
         {
             // If there is no input (the tank is stationary)...
-            if (Mathf.Abs(m_MovementInputValue) < 0.1f && Mathf.Abs(m_TurnInputValue) < 0.1f)
+            if (Mathf.Abs(m_MovementInputValue) < 0.1f && Mathf.Abs(m_TurnInputValue) < 0.08f)
             {
                 // ... and if the audio source is currently playing the driving clip...
                 if (m_MovementAudio.clip == m_EngineDriving)
