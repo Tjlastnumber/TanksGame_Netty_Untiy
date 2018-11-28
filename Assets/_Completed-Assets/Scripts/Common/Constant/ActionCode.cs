@@ -9,5 +9,9 @@ public enum ActionCode
     MsgPlayInfoData,
     MsgOnLogOut,
     MsgLogin,
-    MsgGameRoundEnd
+    MsgGameRoundEnd,
+    MsgCreateRoom,
+    MsgRoomList,
+    MsgJoinRoom,
+    MsgExitRoom
 }

@@ -89,33 +89,4 @@ public class TankBehaviorHanlder : BaseHandler
             PlayerManager.Instance.AddPlayer(playInfo);
         }
     }
-
-
-    /* void HistoryLerping(GameObject tank, Vector3 pos) //平滑插值
-     * {
-     *     if (syncPosList.Count > 0)
-     *     {
-     *         //取出队列中的第一个设为插值的目标
-     *         tank.transform.position = Vector3.Lerp(tank.transform.position, pos, Time.deltaTime * 16f);
-
-     *         //位置足够接近，从队列中移除第一个，紧接着就是第二个
-     *         if (Vector3.Distance(tank.transform.position, pos) < .11f)
-     *         {
-     *             syncPosList.RemoveAt(0);
-     *         }
-
-     *         //如果同步队列过大，加快插值速率，使其更快到达目标点
-     *         if (syncPosList.Count > 10)
-     *         {
-     *             lerpRate = 16f;
-     *         }
-     *         else
-     *         {
-     *             lerpRate = 27f;
-     *         }
-
-     *         Debug.LogFormat("--- syncPosList, count:{0}", syncPosList.Count);
-     *     }
-     * }
-     */
 }

@@ -24,6 +24,10 @@ public class BaseHandler : MonoBehaviour
     }
 
     public virtual void OnResponse(ProtocalData msg) { }
+
+    public virtual void Send() {
+        Send(new ProtocalData(actionCode, null));
+    }
     public virtual void Send(ProtocalData msg)
     {
         MessageManager.Send(msg);

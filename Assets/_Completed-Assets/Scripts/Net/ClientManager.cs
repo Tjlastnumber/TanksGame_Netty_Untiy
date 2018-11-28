@@ -82,5 +82,5 @@ class ClientManager : BaseManager
         }
     }
 }
-public delegate void MessageEventHandler(object sender, ProtocalData e);
+public delegate void MessageEventHandler(object sender, ProtocalData msg);
      
