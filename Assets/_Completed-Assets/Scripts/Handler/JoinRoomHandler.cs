@@ -14,6 +14,12 @@ public class JoinRoomHandler : BaseHandler
         base.Awake();
     }
 
+    public void JoinRoom(string roomId)
+    {
+        ProtocalData data = new ProtocalData(actionCode, new RoomData() { Id = roomId });
+        Send(data);
+    }
+
     public override void OnResponse(ProtocalData msg)
     {
         base.OnResponse(msg);

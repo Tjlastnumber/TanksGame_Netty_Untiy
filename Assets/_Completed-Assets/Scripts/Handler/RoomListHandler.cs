@@ -5,7 +5,8 @@ using System.Text;
 
 public class RoomListHandler : BaseHandler
 {
-    public event Action<List<RoomData>> RoomListCallback;
+    public event Action<List<RoomData>> OnRoomListEvent;
+    private event Action<List<RoomData>> RoomListCallback;
 
     public override void Awake()
     {
@@ -33,6 +34,7 @@ public class RoomListHandler : BaseHandler
         {
             List<RoomData> rooms = ProtoBufSerializable.Decode<List<RoomData>>(msg.Bytes);
             RoomListCallback(rooms);
+            OnRoomListEvent(rooms);
         }
     }
 }

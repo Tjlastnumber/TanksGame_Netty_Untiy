@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224806560667711354}
+  - component: {fileID: 114900465075563048}
   m_Layer: 5
   m_Name: RoomItem
   m_TagString: Untagged
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 222823282954729638}
   - component: {fileID: 114823361321407010}
   m_Layer: 5
-  m_Name: IP
+  m_Name: RoomMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!114 &114504942102495738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room1
+  m_Text: 
 --- !u!114 &114793874706327784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,7 +251,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114504942102495738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114900465075563048}
+        m_MethodName: OnClickJoinRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114823361321407010
@@ -285,7 +297,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 192.168.0.1
+  m_Text: 
+--- !u!114 &114900465075563048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084842030864818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1c9d1cdb230784e94395815562fb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RoomName: {fileID: 114720839265706526}
+  m_PlayerNumber: {fileID: 114052628377655858}
+  m_RoomMaster: {fileID: 114823361321407010}
 --- !u!222 &222293700900502638
 CanvasRenderer:
   m_ObjectHideFlags: 1
